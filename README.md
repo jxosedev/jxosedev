@@ -1,9 +1,9 @@
 ### Olá, eu sou o José Victor
 
 <div align="center">
-  <a href="https://github.com/jxosedev">
-  <img width="42%" src="https://github-readme-stats.vercel.app/api?username=jxosedev&show_icons=true&theme=dracula&include_all_commits=true&count_private=true">
-  <img width="50%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jxosedev&layout=compact&langs_count=7&theme=dracula">
+<a href="https://github.com/rafaballerini">
+  <img width="42%" src="https://github-readme-stats.vercel.app/api?username=jxosedev&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img width="50%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jxosedev&layout=compact&langs_count=7&theme=dracula"/>
 </div>
 <div style="display: inline_block"><br>
   
