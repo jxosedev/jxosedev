@@ -12,7 +12,7 @@
   <img aling="center" alt="Victor-FLUTTER" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
   <img aling="center" alt="Victor-FLUTTER" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
   <img aling="center" alt="Victor-FLUTTER" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
-  <img align="right" alt="Rafa-pic" height="248" style="border-radius:50px;" src="https://media.tenor.com/qc8QHhSMfngAAAAM/bepalzo-monkey.gif">
+  <img align="right" alt="Rafa-pic" height="248" style="border-radius:48px;" src="https://media.tenor.com/qc8QHhSMfngAAAAM/bepalzo-monkey.gif">
                   
 </div>
 
