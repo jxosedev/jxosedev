@@ -1,15 +1,13 @@
-<table align="center" width="100%">
-  <tr>
-    <td width="150" valign="middle">
-      <img src="https://i.pinimg.com/736x/af/ce/e1/afcee10075160ae656ec8ecaf15bb13b.jpg" width="150" style="border-radius: 12px;">
-    </td>
-    <td valign="middle" style="padding-left: 20px;">
-      <h1>Zé</h1>
-      <p>?<br>
-      <strong>@jxosedev</strong></p>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Zé</h1>
+
+<p align="center">
+  <img src="https://i.pinimg.com/736x/af/ce/e1/afcee10075160ae656ec8ecaf15bb13b.jpg" width="200" height="200" style="border-radius: 12px; object-fit: cover;">
+</p>
+
+<p align="center">
+  ?<br>
+  <strong>@jxosedev</strong>
+</p>
 
 ---
 
