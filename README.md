@@ -5,9 +5,13 @@
 </p>
 
 <p align="center">
-  Cybersecurity | Cloud | Programming.<br>
+  Desenvolvedor apaixonado por código e estética dark.<br>
   <a href="https://github.com/jxosedev" style="color: #999;">@jxosedev</a>
 </p>
+
+<h3 align="center">
+  <code>C̸y̸b̸e̸r̸s̸e̸c̸u̸r̸i̸t̸y̸ | C̸l̸o̸u̸d̸ | P̸r̸o̸g̸r̸a̸m̸m̸i̸n̸g̸</code>
+</h3>
 
 ---
 
@@ -45,13 +49,13 @@
 ## 🌐 Social
 
 <p align="center">
-  <a href="https://www.instagram.com/jxosev" target="_blank">
+  <a href="https://www.instagram.com/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
   </a>
   <a href="https://discord.com/" target="_blank">
     <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
   </a>
-  <a href="https://www.linkedin.com/jxosev" target="_blank">
+  <a href="https://www.linkedin.com/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
 </p>
