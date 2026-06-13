@@ -57,7 +57,7 @@
   <a href="https://discord.com/" target="_blank">
     <img src="https://img.shields.io/badge/Discord-000000?style=for-the-badge&logo=discord&logoColor=ffffff&labelColor=000000">
   </a>
-  <a href="https://www.linkedin.com/jxosev" target="_blank">
+  <a href="https://www.linkedin.com/in/jxosev" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=000000">
   </a>
 </p>
