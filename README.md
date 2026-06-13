@@ -61,13 +61,13 @@
 <h3 align="center">Social</h3>
 
 <p align="center">
-  <a href="https://www.instagram.com/" target="_blank">
+  <a href="https://www.instagram.com/jxosev" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=ffffff&labelColor=000000">
   </a>
   <a href="https://discord.com/" target="_blank">
     <img src="https://img.shields.io/badge/Discord-000000?style=for-the-badge&logo=discord&logoColor=ffffff&labelColor=000000">
   </a>
-  <a href="https://www.linkedin.com/" target="_blank">
+  <a href="https://www.linkedin.com/jxosev" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=000000">
   </a>
 </p>
