@@ -90,5 +90,5 @@
 ---
 
 <p align="center">
-  Nada de interessante publico
+  Nada de interessante público
 </p>
