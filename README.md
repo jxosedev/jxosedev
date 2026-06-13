@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  ?.<br>
+  ?<br>
   <strong>@jxosedev</strong>
 </p>
 
