@@ -1,11 +1,11 @@
-<h1 align="center">Olá, eu sou o José Victor</h1>
+<h1 align="center">Zé</h1>
 
 <p align="center">
   <img src="https://i.pinimg.com/736x/39/89/a5/3989a569e960afb5a0b07d66e046dc03.jpg" width="100%" style="border-radius: 12px;">
 </p>
 
 <p align="center">
-  Desenvolvedor apaixonado por código e estética dark.<br>
+  ?.<br>
   <a href="https://github.com/jxosedev" style="color: #999;">@jxosedev</a>
 </p>
 
@@ -49,13 +49,13 @@
 ## 🌐 Social
 
 <p align="center">
-  <a href="https://www.instagram.com/" target="_blank">
+  <a href="https://www.instagram.com/jxosev" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
   </a>
   <a href="https://discord.com/" target="_blank">
     <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
   </a>
-  <a href="https://www.linkedin.com/" target="_blank">
+  <a href="https://www.linkedin.com/jxosev" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
 </p>
