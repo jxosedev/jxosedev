@@ -1,13 +1,15 @@
-<h1 align="center">Zé</h1>
-
-<p align="center">
-  <img src="https://i.pinimg.com/736x/af/ce/e1/afcee10075160ae656ec8ecaf15bb13b.jpg" width="200" height="200" style="border-radius: 12px; object-fit: cover;">
-</p>
-
-<p align="center">
-  ?<br>
-  <strong>@jxosedev</strong>
-</p>
+<table align="center" width="100%">
+  <tr>
+    <td width="150" valign="middle">
+      <img src="https://i.pinimg.com/736x/af/ce/e1/afcee10075160ae656ec8ecaf15bb13b.jpg" width="150" style="border-radius: 12px;">
+    </td>
+    <td valign="middle" style="padding-left: 20px;">
+      <h1>Zé</h1>
+      <p>?<br>
+      <strong>@jxosedev</strong></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -32,17 +34,7 @@
 
 ---
 
-<h3 align="center">Most Used Languages</h3>
-
-<table align="center">
-  <tr>
-    <td>
-      <p align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jxosedev&show_icons=true&layout=pie&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff&langs_count=6" height="250">
-      </p>
-    </td>
-  </tr>
-</table>
+<h3 align="center">C̸y̸b̸e̸r̸s̸e̸c̸u̸r̸i̸t̸y̸ | C̸l̸o̸u̸d̸ | P̸r̸o̸g̸r̸a̸m̸m̸i̸n̸g̸</h3>
 
 ---
 
@@ -50,8 +42,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-000000?style=for-the-badge&logo=openjdk&logoColor=ffffff&labelColor=000000">
-  <img src="https://img.shields.io/badge/Spring-000000?style=for-the-badge&logo=springboot&logoColor=ffffff&labelColor=000000">
-  <img src="https://img.shields.io/badge/Flutter-000000?style=for-the-badge&logo=flutter&logoColor=ffffff&labelColor=000000">
+  <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=ffffff&labelColor=000000">
+  <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=ffffff&labelColor=000000">
   <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=ffffff&labelColor=000000">
   <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=ffffff&labelColor=000000">
 </p>
@@ -90,5 +82,5 @@
 ---
 
 <p align="center">
-  Nada de interessante público
+  Nada de interessante público.
 </p>
