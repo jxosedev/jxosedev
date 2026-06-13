@@ -1,7 +1,7 @@
 <h1 align="center">Zé</h1>
 
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/0?v=4" width="150" style="border-radius: 50%; border: 2px solid #fff;">
+  <img src="https://i.pinimg.com/736x/af/ce/e1/afcee10075160ae656ec8ecaf15bb13b.jpg" width="200" height="200" style="border-radius: 12px; object-fit: cover;">
 </p>
 
 <p align="center">
@@ -61,13 +61,13 @@
 <h3 align="center">Social</h3>
 
 <p align="center">
-  <a href="https://www.instagram.com/jxosev" target="_blank">
+  <a href="https://www.instagram.com/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=ffffff&labelColor=000000">
   </a>
   <a href="https://discord.com/" target="_blank">
     <img src="https://img.shields.io/badge/Discord-000000?style=for-the-badge&logo=discord&logoColor=ffffff&labelColor=000000">
   </a>
-  <a href="https://www.linkedin.com/jxosev" target="_blank">
+  <a href="https://www.linkedin.com/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=000000">
   </a>
 </p>
@@ -90,5 +90,5 @@
 ---
 
 <p align="center">
-  Feito com muito café | © 2026 José Victor
+  Nada de interessante publico
 </p>
