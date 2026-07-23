@@ -21,7 +21,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_STATS_TOKEN }}
+          token: ${{ secrets.NEW_STATS_GITHUB }}
 
       - name: Generate top languages card
         uses: stats-organization/github-readme-stats-action@v2
@@ -29,7 +29,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff
           path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_STATS_TOKEN }}
+          token: ${{ secrets.NEW_STATS_GITHUB }}
 
       - name: Commit cards
         run: |
