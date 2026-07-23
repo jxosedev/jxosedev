@@ -21,11 +21,11 @@
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">⚔ José Victor's GitHub Stats ⚔</h3>
-      <img src="https://github-readme-stats.vercel.app/api?username=jxosedev&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff" width="100%">
+      <img src="https://github-stats-extended.vercel.app/api?username=jxosedev&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff" width="100%">
     </td>
     <td width="50%" valign="top">
       <h3 align="center">☠ Most Used Languages ☠</h3>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jxosedev&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff" width="100%">
+      <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=jxosedev&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff" width="100%">
     </td>
   </tr>
 </table>
