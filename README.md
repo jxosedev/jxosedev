@@ -24,8 +24,14 @@
       <img src="https://github-stats-extended.vercel.app/api?username=jxosedev&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff" width="100%">
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">☠ Most Used Languages ☠</h3>
-      <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=jxosedev&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff" width="100%">
+      <h3 align="center">☠ Technologies ☠</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Java-000000?style=for-the-badge&logo=openjdk&logoColor=ffffff&labelColor=000000">
+        <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=ffffff&labelColor=000000">
+        <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=ffffff&labelColor=000000">
+        <img src="https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=ffffff&labelColor=000000">
+        <img src="https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=ffffff&labelColor=000000">
+      </p>
     </td>
   </tr>
 </table>
