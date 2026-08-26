@@ -1,54 +1,61 @@
-<svg width="300" height="290" viewBox="0 0 300 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="290" viewBox="0 0 300 290" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="descId">
+  <title id="titleId">Most Used Languages</title>
   <style>
-    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; animation: fadeInAnimation 0.8s ease-in-out forwards; }
+    @supports(-moz-appearance: auto) { .header { font-size: 15.5px; } }
+    .lang-name { font: 400 11px "Segoe UI", Ubuntu, Sans-Serif; fill: #ffffff; }
+    .stagger { opacity: 0; animation: fadeInAnimation 0.3s ease-in-out forwards; }
+    @keyframes fadeInAnimation { from { opacity: 0; } to { opacity: 1; } }
   </style>
   <rect x="0.5" y="0.5" width="299" height="99%" rx="4.5" fill="#0a0a0a" stroke="#e4e2e2"/>
-  <text x="25" y="35" class="header">Most Used Languages</text>
+  <g transform="translate(25, 35)">
+    <text x="0" y="0" class="header">Most Used Languages</text>
+  </g>
   <g transform="translate(25, 55)">
     <mask id="rect-mask">
       <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
     </mask>
     
-  <rect mask="url(#rect-mask)" x="0" y="0" width="75.50" height="8" fill="#f1e05a" />
-  <rect mask="url(#rect-mask)" x="75.50" y="0" width="61.25" height="8" fill="#e34c26" />
-  <rect mask="url(#rect-mask)" x="136.75" y="0" width="36.17" height="8" fill="#563d7c" />
-  <rect mask="url(#rect-mask)" x="172.92" y="0" width="28.12" height="8" fill="#b07219" />
-  <rect mask="url(#rect-mask)" x="201.04" y="0" width="26.82" height="8" fill="#3178c6" />
-  <rect mask="url(#rect-mask)" x="227.86" y="0" width="12.50" height="8" fill="#3572A5" />
-  <rect mask="url(#rect-mask)" x="240.36" y="0" width="9.50" height="8" fill="#8b8b8b" />
-  <rect mask="url(#rect-mask)" x="249.86" y="0" width=".02" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="0" y="0" width="75.50" height="8" fill="#f1e05a" />
+    <rect mask="url(#rect-mask)" x="75.50" y="0" width="61.25" height="8" fill="#e34c26" />
+    <rect mask="url(#rect-mask)" x="136.75" y="0" width="36.17" height="8" fill="#563d7c" />
+    <rect mask="url(#rect-mask)" x="172.92" y="0" width="28.12" height="8" fill="#b07219" />
+    <rect mask="url(#rect-mask)" x="201.04" y="0" width="26.82" height="8" fill="#3178c6" />
+    <rect mask="url(#rect-mask)" x="227.86" y="0" width="12.50" height="8" fill="#3572A5" />
+    <rect mask="url(#rect-mask)" x="240.36" y="0" width="9.50" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="249.86" y="0" width=".02" height="8" fill="#8b8b8b" />
     
-  <g transform="translate(0, 25)">
-    <circle cx="5" cy="6" r="5" fill="#f1e05a" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">JavaScript 30.20%</text>
-  </g>
-  <g transform="translate(0, 50)">
-    <circle cx="5" cy="6" r="5" fill="#e34c26" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">HTML 24.50%</text>
-  </g>
-  <g transform="translate(0, 75)">
-    <circle cx="5" cy="6" r="5" fill="#563d7c" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">CSS 14.47%</text>
-  </g>
-  <g transform="translate(0, 100)">
-    <circle cx="5" cy="6" r="5" fill="#b07219" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">Java 11.25%</text>
-  </g>
-  <g transform="translate(0, 125)">
-    <circle cx="5" cy="6" r="5" fill="#3178c6" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">TypeScript 10.73%</text>
-  </g>
-  <g transform="translate(0, 150)">
-    <circle cx="5" cy="6" r="5" fill="#3572A5" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">Python 5.00%</text>
-  </g>
-  <g transform="translate(0, 175)">
-    <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">PLpgSQL 3.80%</text>
-  </g>
-  <g transform="translate(0, 200)">
-    <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
-    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">Dockerfile .01%</text>
-  </g>
+    <g class="stagger" style="animation-delay: 25ms" transform="translate(0, 25)">
+      <circle cx="5" cy="6" r="5" fill="#f1e05a" />
+      <text class="lang-name" x="15" y="10">JavaScript 30.20%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 50ms" transform="translate(0, 50)">
+      <circle cx="5" cy="6" r="5" fill="#e34c26" />
+      <text class="lang-name" x="15" y="10">HTML 24.50%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 75ms" transform="translate(0, 75)">
+      <circle cx="5" cy="6" r="5" fill="#563d7c" />
+      <text class="lang-name" x="15" y="10">CSS 14.47%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 100ms" transform="translate(0, 100)">
+      <circle cx="5" cy="6" r="5" fill="#b07219" />
+      <text class="lang-name" x="15" y="10">Java 11.25%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 125ms" transform="translate(0, 125)">
+      <circle cx="5" cy="6" r="5" fill="#3178c6" />
+      <text class="lang-name" x="15" y="10">TypeScript 10.73%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 150ms" transform="translate(0, 150)">
+      <circle cx="5" cy="6" r="5" fill="#3572A5" />
+      <text class="lang-name" x="15" y="10">Python 5.00%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 175ms" transform="translate(0, 175)">
+      <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
+      <text class="lang-name" x="15" y="10">PLpgSQL 3.80%</text>
+    </g>
+    <g class="stagger" style="animation-delay: 200ms" transform="translate(0, 200)">
+      <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
+      <text class="lang-name" x="15" y="10">Dockerfile .01%</text>
+    </g>
   </g>
 </svg>
