@@ -102,36 +102,28 @@ jobs:
           GH_TOKEN: ${{ secrets.STATS_PAT }}
           USERNAME: ${{ github.repository_owner }}
         run: |
-          # Fetch all repos (public + private) via GraphQL
+          # Fetch all repos (public + private) via GraphQL, excluding forks
           REPOS_JSON=$(gh api graphql -f query='
             query($login: String!) {
               user(login: $login) {
-                repositories(ownerAffiliations: OWNER, first: 100) {
+                repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
                   nodes {
                     name
                     isPrivate
+                    isFork
                   }
                 }
               }
             }
-          ' -f login="$USERNAME" --jq '.data.user.repositories.nodes')
+          ' -f login="$USERNAME" --jq '.data.user.repositories.nodes | map(select(.isFork == false))')
           
-          echo "Repos found: $(echo "$REPOS_JSON" | jq 'length')"
-          
-          # Exclude repos that are documentation-only (skew language stats)
-          EXCLUDE_REPOS="signoz.io base-conhecimento-infra"
+          echo "Repos found (excluding forks): $(echo "$REPOS_JSON" | jq 'length')"
           
           declare -A LANG_BYTES
           TOTAL_BYTES=0
           
-          # Fetch languages for each repo using REST API (token gives access to private repos)
+          # Fetch languages for each repo using REST API
           for REPO_NAME in $(echo "$REPOS_JSON" | jq -r '.[].name'); do
-            # Skip excluded repos
-            if echo "$EXCLUDE_REPOS" | grep -qw "$REPO_NAME"; then
-              echo "Skipping excluded repo: $REPO_NAME"
-              continue
-            fi
-            
             echo "Fetching languages for: $REPO_NAME"
             LANGS=$(gh api "repos/${USERNAME}/${REPO_NAME}/languages" --jq 'to_entries[] | "\(.key) \(.value)"' 2>/dev/null || true)
             while IFS= read -r LINE; do
