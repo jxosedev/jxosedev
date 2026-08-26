@@ -169,9 +169,10 @@ jobs:
           }
 
           BAR_ITEMS=""
-          LANG_ITEMS=""
+          COL1_ITEMS=""
+          COL2_ITEMS=""
           X_OFFSET=0
-          Y_POS=25
+          INDEX=0
 
           while IFS=' ' read -r BYTES LANG; do
             PCT=$(echo "scale=2; $BYTES * 100 / $TOTAL_BYTES" | bc)
@@ -181,17 +182,28 @@ jobs:
             BAR_ITEMS="${BAR_ITEMS}
               <rect mask=\"url(#rect-mask)\" x=\"${X_OFFSET}\" y=\"0\" width=\"${WIDTH}\" height=\"8\" fill=\"${COLOR}\" />"
 
-            LANG_ITEMS="${LANG_ITEMS}
-              <g class=\"stagger\" style=\"animation-delay: ${Y_POS}ms\" transform=\"translate(0, ${Y_POS})\">
+            LANG_ITEM="<g class=\"stagger\" style=\"animation-delay: $(( 450 + INDEX * 150 ))ms\">
                 <circle cx=\"5\" cy=\"6\" r=\"5\" fill=\"${COLOR}\" />
                 <text class=\"lang-name\" x=\"15\" y=\"10\">${LANG} ${PCT}%</text>
               </g>"
 
+            if [ "$INDEX" -lt 4 ]; then
+              Y_POS=$(( INDEX * 25 ))
+              COL1_ITEMS="${COL1_ITEMS}
+              <g transform=\"translate(0, ${Y_POS})\">${LANG_ITEM}
+              </g>"
+            else
+              Y_POS=$(( (INDEX - 4) * 25 ))
+              COL2_ITEMS="${COL2_ITEMS}
+              <g transform=\"translate(150, ${Y_POS})\">${LANG_ITEM}
+              </g>"
+            fi
+
             X_OFFSET=$(echo "$X_OFFSET + $WIDTH" | bc)
-            Y_POS=$(( Y_POS + 25 ))
+            INDEX=$(( INDEX + 1 ))
           done <<< "$SORTED_LANGS"
 
-          HEIGHT=$(( 90 + Y_POS - 25 ))
+          HEIGHT=190
           cat > profile/top-langs.svg << SVGEOF
           <svg width="300" height="${HEIGHT}" viewBox="0 0 300 ${HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="descId">
             <title id="titleId">Most Used Languages</title>
@@ -211,7 +223,10 @@ jobs:
                 <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
               </mask>
               ${BAR_ITEMS}
-              ${LANG_ITEMS}
+            </g>
+            <g transform="translate(25, 80)">
+              ${COL1_ITEMS}
+              ${COL2_ITEMS}
             </g>
           </svg>
           SVGEOF
