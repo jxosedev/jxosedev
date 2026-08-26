@@ -1,4 +1,4 @@
-<svg width="300" height="290" viewBox="0 0 300 290" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="descId">
+<svg width="300" height="190" viewBox="0 0 300 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="descId">
   <title id="titleId">Most Used Languages</title>
   <style>
     .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; animation: fadeInAnimation 0.8s ease-in-out forwards; }
@@ -24,38 +24,49 @@
     <rect mask="url(#rect-mask)" x="227.86" y="0" width="12.50" height="8" fill="#3572A5" />
     <rect mask="url(#rect-mask)" x="240.36" y="0" width="9.50" height="8" fill="#8b8b8b" />
     <rect mask="url(#rect-mask)" x="249.86" y="0" width=".02" height="8" fill="#8b8b8b" />
+  </g>
+  <g transform="translate(25, 80)">
     
-    <g class="stagger" style="animation-delay: 25ms" transform="translate(0, 25)">
+    <g transform="translate(0, 0)"><g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text class="lang-name" x="15" y="10">JavaScript 30.20%</text>
     </g>
-    <g class="stagger" style="animation-delay: 50ms" transform="translate(0, 50)">
+    </g>
+    <g transform="translate(0, 25)"><g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
       <text class="lang-name" x="15" y="10">HTML 24.50%</text>
     </g>
-    <g class="stagger" style="animation-delay: 75ms" transform="translate(0, 75)">
+    </g>
+    <g transform="translate(0, 50)"><g class="stagger" style="animation-delay: 750ms">
       <circle cx="5" cy="6" r="5" fill="#563d7c" />
       <text class="lang-name" x="15" y="10">CSS 14.47%</text>
     </g>
-    <g class="stagger" style="animation-delay: 100ms" transform="translate(0, 100)">
+    </g>
+    <g transform="translate(0, 75)"><g class="stagger" style="animation-delay: 900ms">
       <circle cx="5" cy="6" r="5" fill="#b07219" />
       <text class="lang-name" x="15" y="10">Java 11.25%</text>
     </g>
-    <g class="stagger" style="animation-delay: 125ms" transform="translate(0, 125)">
+    </g>
+    
+    <g transform="translate(150, 0)"><g class="stagger" style="animation-delay: 1050ms">
       <circle cx="5" cy="6" r="5" fill="#3178c6" />
       <text class="lang-name" x="15" y="10">TypeScript 10.73%</text>
     </g>
-    <g class="stagger" style="animation-delay: 150ms" transform="translate(0, 150)">
+    </g>
+    <g transform="translate(150, 25)"><g class="stagger" style="animation-delay: 1200ms">
       <circle cx="5" cy="6" r="5" fill="#3572A5" />
       <text class="lang-name" x="15" y="10">Python 5.00%</text>
     </g>
-    <g class="stagger" style="animation-delay: 175ms" transform="translate(0, 175)">
+    </g>
+    <g transform="translate(150, 50)"><g class="stagger" style="animation-delay: 1350ms">
       <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
       <text class="lang-name" x="15" y="10">PLpgSQL 3.80%</text>
     </g>
-    <g class="stagger" style="animation-delay: 200ms" transform="translate(0, 200)">
+    </g>
+    <g transform="translate(150, 75)"><g class="stagger" style="animation-delay: 1500ms">
       <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
       <text class="lang-name" x="15" y="10">Dockerfile .01%</text>
+    </g>
     </g>
   </g>
 </svg>
