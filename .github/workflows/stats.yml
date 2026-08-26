@@ -2,7 +2,7 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs once daily at midnight
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,20 +16,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff&count_private=true
-          path: profile/stats.svg
-          token: ${{ secrets.STATS_PAT }}
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff&count_private=true&token=${{ secrets.STATS_PAT }}" -o profile/stats.svg
 
       - name: Generate top languages card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff&count_private=true
-          path: profile/top-langs.svg
-          token: ${{ secrets.STATS_PAT }}
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=${{ github.repository_owner }}&layout=compact&langs_count=10&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff&count_private=true&token=${{ secrets.STATS_PAT }}" -o profile/top-langs.svg
 
       - name: Commit cards
         run: |
