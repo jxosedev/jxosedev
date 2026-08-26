@@ -25,24 +25,15 @@ jobs:
             query($login: String!) {
               user(login: $login) {
                 name
-                repositories(ownerAffiliations: OWNER, first: 100) {
+                repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
                   nodes {
                     name
                     isPrivate
-                    defaultBranchRef {
-                      target {
-                        ... on Commit {
-                          history {
-                            totalCount
-                          }
-                        }
-                      }
-                    }
                     stargazerCount
-                    pullRequests {
+                    pullRequests(affiliations: OWNER) {
                       totalCount
                     }
-                    issues {
+                    issues(affiliations: OWNER) {
                       totalCount
                     }
                   }
@@ -65,14 +56,12 @@ jobs:
           TOTAL_STARS=$(echo "$STATS" | jq -r '[.repositories.nodes[].stargazerCount] | add // 0')
           TOTAL_PRS=$(echo "$STATS" | jq -r '[.repositories.nodes[].pullRequests.totalCount] | add // 0')
           TOTAL_ISSUES=$(echo "$STATS" | jq -r '[.repositories.nodes[].issues.totalCount] | add // 0')
-          TOTAL_COMMITS=$(echo "$STATS" | jq -r '[.repositories.nodes[] | if .defaultBranchRef.target.history.totalCount then .defaultBranchRef.target.history.totalCount else 0 end] | add // 0')
 
           echo "User: $USER_NAME"
           echo "Contributions (last year): $TOTAL_CONTRIBUTIONS"
           echo "Total Stars: $TOTAL_STARS"
           echo "Total PRs: $TOTAL_PRS"
           echo "Total Issues: $TOTAL_ISSUES"
-          echo "Total Commits (all time): $TOTAL_COMMITS"
 
           # Generate stats SVG
           cat > profile/stats.svg << SVGEOF
@@ -87,7 +76,7 @@ jobs:
             <text x="25" y="35" class="text" font-size="18">${USER_NAME}'s GitHub Stats</text>
             <g transform="translate(25, 55)">
               <text x="0" y="15" class="small">⭐ Total Stars Earned: <tspan font-weight="bold">${TOTAL_STARS}</tspan></text>
-              <text x="0" y="40" class="small">⏱ Total Commits (all time): <tspan font-weight="bold">${TOTAL_COMMITS}</tspan></text>
+              <text x="0" y="40" class="small">⏱ Total Commits (last year): <tspan font-weight="bold">${TOTAL_CONTRIBUTIONS}</tspan></text>
               <text x="0" y="65" class="small">🔀 Total PRs: <tspan font-weight="bold">${TOTAL_PRS}</tspan></text>
               <text x="0" y="90" class="small">❗ Total Issues: <tspan font-weight="bold">${TOTAL_ISSUES}</tspan></text>
               <text x="0" y="115" class="small">📅 Contributed to (last year): <tspan font-weight="bold">${TOTAL_CONTRIBUTIONS}</tspan></text>
