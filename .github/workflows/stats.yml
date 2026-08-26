@@ -30,10 +30,10 @@ jobs:
                     name
                     isPrivate
                     stargazerCount
-                    pullRequests(affiliations: OWNER) {
+                    pullRequests {
                       totalCount
                     }
-                    issues(affiliations: OWNER) {
+                    issues {
                       totalCount
                     }
                   }
