@@ -15,13 +15,196 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats card
+      - name: Generate stats cards
+        env:
+          GH_TOKEN: ${{ secrets.STATS_PAT }}
+          USERNAME: ${{ github.repository_owner }}
         run: |
-          curl -s "https://github-readme-stats.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&icon_color=ffffff&title_color=ffffff&count_private=true&token=${{ secrets.STATS_PAT }}" -o profile/stats.svg
+          # Fetch user stats via GraphQL
+          STATS=$(gh api graphql -f query='
+            query($login: String!) {
+              user(login: $login) {
+                name
+                repositories(ownerAffiliations: OWNER, first: 100) {
+                  nodes {
+                    name
+                    isPrivate
+                    defaultBranchRef {
+                      target {
+                        ... on Commit {
+                          history {
+                            totalCount
+                          }
+                        }
+                      }
+                    }
+                    stargazerCount
+                    pullRequests {
+                      totalCount
+                    }
+                    issues {
+                      totalCount
+                    }
+                  }
+                }
+                contributionsCollection {
+                  contributionCalendar {
+                    totalContributions
+                  }
+                }
+              }
+            }
+          ' -f login="$USERNAME" --jq '.data.user')
+
+          USER_NAME=$(echo "$STATS" | jq -r '.name // empty')
+          if [ -z "$USER_NAME" ]; then
+            USER_NAME="$USERNAME"
+          fi
+
+          TOTAL_CONTRIBUTIONS=$(echo "$STATS" | jq -r '.contributionsCollection.contributionCalendar.totalContributions')
+          TOTAL_STARS=$(echo "$STATS" | jq -r '[.repositories.nodes[].stargazerCount] | add // 0')
+          TOTAL_PRS=$(echo "$STATS" | jq -r '[.repositories.nodes[].pullRequests.totalCount] | add // 0')
+          TOTAL_ISSUES=$(echo "$STATS" | jq -r '[.repositories.nodes[].issues.totalCount] | add // 0')
+          TOTAL_COMMITS=$(echo "$STATS" | jq -r '[.repositories.nodes[] | if .defaultBranchRef.target.history.totalCount then .defaultBranchRef.target.history.totalCount else 0 end] | add // 0')
+
+          echo "User: $USER_NAME"
+          echo "Contributions (last year): $TOTAL_CONTRIBUTIONS"
+          echo "Total Stars: $TOTAL_STARS"
+          echo "Total PRs: $TOTAL_PRS"
+          echo "Total Issues: $TOTAL_ISSUES"
+          echo "Total Commits (all time): $TOTAL_COMMITS"
+
+          # Generate stats SVG
+          cat > profile/stats.svg << SVGEOF
+          <svg width="467" height="195" viewBox="0 0 467 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+              .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+              .icon { fill: #ffffff }
+              .rank-text { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+            </style>
+            <rect x="0.5" y="0.5" width="466" height="99%" rx="4.5" fill="#0a0a0a" stroke="#e4e2e2"/>
+            <text x="25" y="35" class="text" font-size="18">${USER_NAME}'s GitHub Stats</text>
+            <g transform="translate(25, 55)">
+              <text x="0" y="15" class="small">⭐ Total Stars Earned: <tspan font-weight="bold">${TOTAL_STARS}</tspan></text>
+              <text x="0" y="40" class="small">⏱ Total Commits (all time): <tspan font-weight="bold">${TOTAL_COMMITS}</tspan></text>
+              <text x="0" y="65" class="small">🔀 Total PRs: <tspan font-weight="bold">${TOTAL_PRS}</tspan></text>
+              <text x="0" y="90" class="small">❗ Total Issues: <tspan font-weight="bold">${TOTAL_ISSUES}</tspan></text>
+              <text x="0" y="115" class="small">📅 Contributed to (last year): <tspan font-weight="bold">${TOTAL_CONTRIBUTIONS}</tspan></text>
+            </g>
+          </svg>
+          SVGEOF
+
+          echo "Stats SVG generated"
 
       - name: Generate top languages card
+        env:
+          GH_TOKEN: ${{ secrets.STATS_PAT }}
+          USERNAME: ${{ github.repository_owner }}
         run: |
-          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=${{ github.repository_owner }}&layout=compact&langs_count=10&theme=chartreuse-dark&hide_border=true&bg_color=0a0a0a&text_color=ffffff&title_color=ffffff&count_private=true&token=${{ secrets.STATS_PAT }}" -o profile/top-langs.svg
+          # Fetch languages via REST API
+          REPOS=$(gh api "users/${USERNAME}/repos?per_page=100&type=public" --jq '.[].name')
+          
+          declare -A LANG_BYTES
+          TOTAL_BYTES=0
+          
+          for REPO in $REPOS; do
+            LANGS=$(gh api "repos/${USERNAME}/${REPO}/languages" --jq 'to_entries[] | "\(.key) \(.value)"' 2>/dev/null || true)
+            while IFS=' ' read -r LANG BYTES; do
+              if [ -n "$LANG" ] && [ -n "$BYTES" ]; then
+                LANG_BYTES[$LANG]=$(( ${LANG_BYTES[$LANG]:-0} + BYTES ))
+                TOTAL_BYTES=$(( TOTAL_BYTES + BYTES ))
+              fi
+            done <<< "$LANGS"
+          done
+          
+          echo "Languages found: ${!LANG_BYTES[@]}"
+          echo "Total bytes: $TOTAL_BYTES"
+          
+          # Sort by bytes and get top 8
+          SORTED_LANGS=$(for LANG in "${!LANG_BYTES[@]}"; do
+            echo "${LANG_BYTES[$LANG]} $LANG"
+          done | sort -rn | head -8)
+          
+          echo "Top languages:"
+          echo "$SORTED_LANGS"
+          
+          # Language colors
+          get_color() {
+            case "$1" in
+              JavaScript) echo "#f1e05a" ;;
+              TypeScript) echo "#3178c6" ;;
+              Java) echo "#b07219" ;;
+              Python) echo "#3572A5" ;;
+              HTML) echo "#e34c26" ;;
+              CSS) echo "#563d7c" ;;
+              Shell) echo "#89e051" ;;
+              Go) echo "#00ADD8" ;;
+              Rust) echo "#dea584" ;;
+              PHP) echo "#4F5D95" ;;
+              Ruby) echo "#701516" ;;
+              C) echo "#555555" ;;
+              "C++") echo "#f34b7d" ;;
+              "C#") echo "#178600" ;;
+              Dart) echo "#00B4AB" ;;
+              Kotlin) echo "#A97BFF" ;;
+              Swift) echo "#F05138" ;;
+              Vue) echo "#41b883" ;;
+              *) echo "#8b8b8b" ;;
+            esac
+          }
+          
+          # Calculate percentages and build SVG bars
+          BAR_WIDTH=250
+          X_OFFSET=0
+          LANG_ITEMS=""
+          BAR_ITEMS=""
+          Y_POS=25
+          COLOR_INDEX=0
+          
+          while IFS=' ' read -r BYTES LANG; do
+            if [ "$TOTAL_BYTES" -gt 0 ]; then
+              PCT=$(echo "scale=2; $BYTES * 100 / $TOTAL_BYTES" | bc)
+            else
+              PCT=0
+            fi
+            WIDTH=$(echo "scale=2; $PCT * $BAR_WIDTH / 100" | bc)
+            COLOR=$(get_color "$LANG")
+            
+            BAR_ITEMS="${BAR_ITEMS}
+            <rect mask=\"url(#rect-mask)\" x=\"${X_OFFSET}\" y=\"0\" width=\"${WIDTH}\" height=\"8\" fill=\"${COLOR}\" />"
+            
+            LANG_ITEMS="${LANG_ITEMS}
+            <g transform=\"translate(0, ${Y_POS})\">
+              <circle cx=\"5\" cy=\"6\" r=\"5\" fill=\"${COLOR}\" />
+              <text x=\"15\" y=\"10\" font=\"400 11px 'Segoe UI', Ubuntu, Sans-Serif\" fill=\"#ffffff\">${LANG} ${PCT}%</text>
+            </g>"
+            
+            X_OFFSET=$(echo "$X_OFFSET + $WIDTH" | bc)
+            Y_POS=$(( Y_POS + 25 ))
+            COLOR_INDEX=$(( COLOR_INDEX + 1 ))
+          done <<< "$SORTED_LANGS"
+          
+          # Generate top-langs SVG
+          HEIGHT=$(( 90 + Y_POS - 25 ))
+          cat > profile/top-langs.svg << SVGEOF
+          <svg width="300" height="${HEIGHT}" viewBox="0 0 300 ${HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+            </style>
+            <rect x="0.5" y="0.5" width="299" height="99%" rx="4.5" fill="#0a0a0a" stroke="#e4e2e2"/>
+            <text x="25" y="35" class="header">Most Used Languages</text>
+            <g transform="translate(25, 55)">
+              <mask id="rect-mask">
+                <rect x="0" y="0" width="${BAR_WIDTH}" height="8" fill="white" rx="5"/>
+              </mask>
+              ${BAR_ITEMS}
+              ${LANG_ITEMS}
+            </g>
+          </svg>
+          SVGEOF
+          
+          echo "Top languages SVG generated"
 
       - name: Commit cards
         run: |
