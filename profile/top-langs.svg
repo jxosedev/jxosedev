@@ -1,5 +1,54 @@
-The deployment is currently unavailable
-
-DEPLOYMENT_PAUSED
-
-sfo1::5ltwz-1787745593555-a55b3aef7926
+<svg width="300" height="290" viewBox="0 0 300 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+  </style>
+  <rect x="0.5" y="0.5" width="299" height="99%" rx="4.5" fill="#0a0a0a" stroke="#e4e2e2"/>
+  <text x="25" y="35" class="header">Most Used Languages</text>
+  <g transform="translate(25, 55)">
+    <mask id="rect-mask">
+      <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
+    </mask>
+    
+  <rect mask="url(#rect-mask)" x="0" y="0" width="200.45" height="8" fill="#3178c6" />
+  <rect mask="url(#rect-mask)" x="200.45" y="0" width="38.60" height="8" fill="#8b8b8b" />
+  <rect mask="url(#rect-mask)" x="239.05" y="0" width="6.02" height="8" fill="#f1e05a" />
+  <rect mask="url(#rect-mask)" x="245.07" y="0" width="2.17" height="8" fill="#e34c26" />
+  <rect mask="url(#rect-mask)" x="247.24" y="0" width="1.30" height="8" fill="#563d7c" />
+  <rect mask="url(#rect-mask)" x="248.54" y="0" width=".50" height="8" fill="#F05138" />
+  <rect mask="url(#rect-mask)" x="249.04" y="0" width=".42" height="8" fill="#3572A5" />
+  <rect mask="url(#rect-mask)" x="249.46" y="0" width=".17" height="8" fill="#89e051" />
+    
+  <g transform="translate(0, 25)">
+    <circle cx="5" cy="6" r="5" fill="#3178c6" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">TypeScript 80.18%</text>
+  </g>
+  <g transform="translate(0, 50)">
+    <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">MDX 15.44%</text>
+  </g>
+  <g transform="translate(0, 75)">
+    <circle cx="5" cy="6" r="5" fill="#f1e05a" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">JavaScript 2.41%</text>
+  </g>
+  <g transform="translate(0, 100)">
+    <circle cx="5" cy="6" r="5" fill="#e34c26" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">HTML .87%</text>
+  </g>
+  <g transform="translate(0, 125)">
+    <circle cx="5" cy="6" r="5" fill="#563d7c" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">CSS .52%</text>
+  </g>
+  <g transform="translate(0, 150)">
+    <circle cx="5" cy="6" r="5" fill="#F05138" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">Swift .20%</text>
+  </g>
+  <g transform="translate(0, 175)">
+    <circle cx="5" cy="6" r="5" fill="#3572A5" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">Python .17%</text>
+  </g>
+  <g transform="translate(0, 200)">
+    <circle cx="5" cy="6" r="5" fill="#89e051" />
+    <text x="15" y="10" font="400 11px 'Segoe UI', Ubuntu, Sans-Serif" fill="#ffffff">Shell .07%</text>
+  </g>
+  </g>
+</svg>

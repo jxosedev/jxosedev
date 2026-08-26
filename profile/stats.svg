@@ -1,5 +1,17 @@
-The deployment is currently unavailable
-
-DEPLOYMENT_PAUSED
-
-sfo1::blzkg-1787745593498-9895c460a09d
+<svg width="467" height="195" viewBox="0 0 467 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+    .icon { fill: #ffffff }
+    .rank-text { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff }
+  </style>
+  <rect x="0.5" y="0.5" width="466" height="99%" rx="4.5" fill="#0a0a0a" stroke="#e4e2e2"/>
+  <text x="25" y="35" class="text" font-size="18">José Victor 's GitHub Stats</text>
+  <g transform="translate(25, 55)">
+    <text x="0" y="15" class="small">⭐ Total Stars Earned: <tspan font-weight="bold">1</tspan></text>
+    <text x="0" y="40" class="small">⏱ Total Commits (all time): <tspan font-weight="bold">10550</tspan></text>
+    <text x="0" y="65" class="small">🔀 Total PRs: <tspan font-weight="bold">41</tspan></text>
+    <text x="0" y="90" class="small">❗ Total Issues: <tspan font-weight="bold">1</tspan></text>
+    <text x="0" y="115" class="small">📅 Contributed to (last year): <tspan font-weight="bold">389</tspan></text>
+  </g>
+</svg>
