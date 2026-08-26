@@ -102,16 +102,33 @@ jobs:
           GH_TOKEN: ${{ secrets.STATS_PAT }}
           USERNAME: ${{ github.repository_owner }}
         run: |
-          # Fetch languages via REST API
-          REPOS=$(gh api "users/${USERNAME}/repos?per_page=100&type=public" --jq '.[].name')
+          # Fetch all repos (public + private) via GraphQL
+          REPOS_JSON=$(gh api graphql -f query='
+            query($login: String!) {
+              user(login: $login) {
+                repositories(ownerAffiliations: OWNER, first: 100) {
+                  nodes {
+                    name
+                    isPrivate
+                  }
+                }
+              }
+            }
+          ' -f login="$USERNAME" --jq '.data.user.repositories.nodes')
+          
+          echo "Repos found: $(echo "$REPOS_JSON" | jq 'length')"
           
           declare -A LANG_BYTES
           TOTAL_BYTES=0
           
-          for REPO in $REPOS; do
-            LANGS=$(gh api "repos/${USERNAME}/${REPO}/languages" --jq 'to_entries[] | "\(.key) \(.value)"' 2>/dev/null || true)
-            while IFS=' ' read -r LANG BYTES; do
-              if [ -n "$LANG" ] && [ -n "$BYTES" ]; then
+          # Fetch languages for each repo using REST API (token gives access to private repos)
+          for REPO_NAME in $(echo "$REPOS_JSON" | jq -r '.[].name'); do
+            echo "Fetching languages for: $REPO_NAME"
+            LANGS=$(gh api "repos/${USERNAME}/${REPO_NAME}/languages" --jq 'to_entries[] | "\(.key) \(.value)"' 2>/dev/null || true)
+            while IFS= read -r LINE; do
+              LANG=$(echo "$LINE" | awk '{print $1}')
+              BYTES=$(echo "$LINE" | awk '{print $2}')
+              if [ -n "$LANG" ] && [ -n "$BYTES" ] && [ "$BYTES" -gt 0 ] 2>/dev/null; then
                 LANG_BYTES[$LANG]=$(( ${LANG_BYTES[$LANG]:-0} + BYTES ))
                 TOTAL_BYTES=$(( TOTAL_BYTES + BYTES ))
               fi
