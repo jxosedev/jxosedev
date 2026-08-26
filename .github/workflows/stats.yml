@@ -118,11 +118,20 @@ jobs:
           
           echo "Repos found: $(echo "$REPOS_JSON" | jq 'length')"
           
+          # Exclude repos that are documentation-only (skew language stats)
+          EXCLUDE_REPOS="signoz.io base-conhecimento-infra"
+          
           declare -A LANG_BYTES
           TOTAL_BYTES=0
           
           # Fetch languages for each repo using REST API (token gives access to private repos)
           for REPO_NAME in $(echo "$REPOS_JSON" | jq -r '.[].name'); do
+            # Skip excluded repos
+            if echo "$EXCLUDE_REPOS" | grep -qw "$REPO_NAME"; then
+              echo "Skipping excluded repo: $REPO_NAME"
+              continue
+            fi
+            
             echo "Fetching languages for: $REPO_NAME"
             LANGS=$(gh api "repos/${USERNAME}/${REPO_NAME}/languages" --jq 'to_entries[] | "\(.key) \(.value)"' 2>/dev/null || true)
             while IFS= read -r LINE; do
