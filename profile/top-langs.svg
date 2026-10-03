@@ -16,51 +16,51 @@
       <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
     </mask>
     
-    <rect mask="url(#rect-mask)" x="0" y="0" width="87.27" height="8" fill="#f1e05a" />
-    <rect mask="url(#rect-mask)" x="87.27" y="0" width="55.20" height="8" fill="#e34c26" />
-    <rect mask="url(#rect-mask)" x="142.47" y="0" width="38.82" height="8" fill="#563d7c" />
-    <rect mask="url(#rect-mask)" x="181.29" y="0" width="23.57" height="8" fill="#b07219" />
-    <rect mask="url(#rect-mask)" x="204.86" y="0" width="22.47" height="8" fill="#3178c6" />
-    <rect mask="url(#rect-mask)" x="227.33" y="0" width="12.05" height="8" fill="#8b8b8b" />
-    <rect mask="url(#rect-mask)" x="239.38" y="0" width="10.47" height="8" fill="#3572A5" />
-    <rect mask="url(#rect-mask)" x="249.85" y="0" width=".02" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="0" y="0" width="86.97" height="8" fill="#f1e05a" />
+    <rect mask="url(#rect-mask)" x="86.97" y="0" width="55.17" height="8" fill="#e34c26" />
+    <rect mask="url(#rect-mask)" x="142.14" y="0" width="38.32" height="8" fill="#563d7c" />
+    <rect mask="url(#rect-mask)" x="180.46" y="0" width="23.87" height="8" fill="#b07219" />
+    <rect mask="url(#rect-mask)" x="204.33" y="0" width="22.75" height="8" fill="#3178c6" />
+    <rect mask="url(#rect-mask)" x="227.08" y="0" width="12.20" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="239.28" y="0" width="10.60" height="8" fill="#3572A5" />
+    <rect mask="url(#rect-mask)" x="249.88" y="0" width=".02" height="8" fill="#8b8b8b" />
   </g>
   <g transform="translate(25, 80)">
     
     <g transform="translate(0, 0)"><g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
-      <text class="lang-name" x="15" y="10">JavaScript 34.91%</text>
+      <text class="lang-name" x="15" y="10">JavaScript 34.79%</text>
     </g>
     </g>
     <g transform="translate(0, 25)"><g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
-      <text class="lang-name" x="15" y="10">HTML 22.08%</text>
+      <text class="lang-name" x="15" y="10">HTML 22.07%</text>
     </g>
     </g>
     <g transform="translate(0, 50)"><g class="stagger" style="animation-delay: 750ms">
       <circle cx="5" cy="6" r="5" fill="#563d7c" />
-      <text class="lang-name" x="15" y="10">CSS 15.53%</text>
+      <text class="lang-name" x="15" y="10">CSS 15.33%</text>
     </g>
     </g>
     <g transform="translate(0, 75)"><g class="stagger" style="animation-delay: 900ms">
       <circle cx="5" cy="6" r="5" fill="#b07219" />
-      <text class="lang-name" x="15" y="10">Java 9.43%</text>
+      <text class="lang-name" x="15" y="10">Java 9.55%</text>
     </g>
     </g>
     
     <g transform="translate(150, 0)"><g class="stagger" style="animation-delay: 1050ms">
       <circle cx="5" cy="6" r="5" fill="#3178c6" />
-      <text class="lang-name" x="15" y="10">TypeScript 8.99%</text>
+      <text class="lang-name" x="15" y="10">TypeScript 9.10%</text>
     </g>
     </g>
     <g transform="translate(150, 25)"><g class="stagger" style="animation-delay: 1200ms">
       <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
-      <text class="lang-name" x="15" y="10">PLpgSQL 4.82%</text>
+      <text class="lang-name" x="15" y="10">PLpgSQL 4.88%</text>
     </g>
     </g>
     <g transform="translate(150, 50)"><g class="stagger" style="animation-delay: 1350ms">
       <circle cx="5" cy="6" r="5" fill="#3572A5" />
-      <text class="lang-name" x="15" y="10">Python 4.19%</text>
+      <text class="lang-name" x="15" y="10">Python 4.24%</text>
     </g>
     </g>
     <g transform="translate(150, 75)"><g class="stagger" style="animation-delay: 1500ms">
