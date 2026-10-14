@@ -16,10 +16,10 @@
       <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
     </mask>
     
-    <rect mask="url(#rect-mask)" x="0" y="0" width="99.10" height="8" fill="#f1e05a" />
-    <rect mask="url(#rect-mask)" x="99.10" y="0" width="53.17" height="8" fill="#e34c26" />
-    <rect mask="url(#rect-mask)" x="152.27" y="0" width="37.57" height="8" fill="#563d7c" />
-    <rect mask="url(#rect-mask)" x="189.84" y="0" width="20.55" height="8" fill="#b07219" />
+    <rect mask="url(#rect-mask)" x="0" y="0" width="99.07" height="8" fill="#f1e05a" />
+    <rect mask="url(#rect-mask)" x="99.07" y="0" width="53.15" height="8" fill="#e34c26" />
+    <rect mask="url(#rect-mask)" x="152.22" y="0" width="37.65" height="8" fill="#563d7c" />
+    <rect mask="url(#rect-mask)" x="189.87" y="0" width="20.52" height="8" fill="#b07219" />
     <rect mask="url(#rect-mask)" x="210.39" y="0" width="19.57" height="8" fill="#3178c6" />
     <rect mask="url(#rect-mask)" x="229.96" y="0" width="10.77" height="8" fill="#8b8b8b" />
     <rect mask="url(#rect-mask)" x="240.73" y="0" width="9.12" height="8" fill="#3572A5" />
@@ -29,22 +29,22 @@
     
     <g transform="translate(0, 0)"><g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
-      <text class="lang-name" x="15" y="10">JavaScript 39.64%</text>
+      <text class="lang-name" x="15" y="10">JavaScript 39.63%</text>
     </g>
     </g>
     <g transform="translate(0, 25)"><g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
-      <text class="lang-name" x="15" y="10">HTML 21.27%</text>
+      <text class="lang-name" x="15" y="10">HTML 21.26%</text>
     </g>
     </g>
     <g transform="translate(0, 50)"><g class="stagger" style="animation-delay: 750ms">
       <circle cx="5" cy="6" r="5" fill="#563d7c" />
-      <text class="lang-name" x="15" y="10">CSS 15.03%</text>
+      <text class="lang-name" x="15" y="10">CSS 15.06%</text>
     </g>
     </g>
     <g transform="translate(0, 75)"><g class="stagger" style="animation-delay: 900ms">
       <circle cx="5" cy="6" r="5" fill="#b07219" />
-      <text class="lang-name" x="15" y="10">Java 8.22%</text>
+      <text class="lang-name" x="15" y="10">Java 8.21%</text>
     </g>
     </g>
     
