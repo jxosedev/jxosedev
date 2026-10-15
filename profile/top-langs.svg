@@ -17,13 +17,13 @@
     </mask>
     
     <rect mask="url(#rect-mask)" x="0" y="0" width="99.07" height="8" fill="#f1e05a" />
-    <rect mask="url(#rect-mask)" x="99.07" y="0" width="53.15" height="8" fill="#e34c26" />
-    <rect mask="url(#rect-mask)" x="152.22" y="0" width="37.65" height="8" fill="#563d7c" />
-    <rect mask="url(#rect-mask)" x="189.87" y="0" width="20.52" height="8" fill="#b07219" />
-    <rect mask="url(#rect-mask)" x="210.39" y="0" width="19.57" height="8" fill="#3178c6" />
-    <rect mask="url(#rect-mask)" x="229.96" y="0" width="10.77" height="8" fill="#8b8b8b" />
-    <rect mask="url(#rect-mask)" x="240.73" y="0" width="9.12" height="8" fill="#3572A5" />
-    <rect mask="url(#rect-mask)" x="249.85" y="0" width=".02" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="99.07" y="0" width="53.12" height="8" fill="#e34c26" />
+    <rect mask="url(#rect-mask)" x="152.19" y="0" width="37.65" height="8" fill="#563d7c" />
+    <rect mask="url(#rect-mask)" x="189.84" y="0" width="20.52" height="8" fill="#b07219" />
+    <rect mask="url(#rect-mask)" x="210.36" y="0" width="19.57" height="8" fill="#3178c6" />
+    <rect mask="url(#rect-mask)" x="229.93" y="0" width="10.85" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="240.78" y="0" width="9.12" height="8" fill="#3572A5" />
+    <rect mask="url(#rect-mask)" x="249.90" y="0" width=".02" height="8" fill="#8b8b8b" />
   </g>
   <g transform="translate(25, 80)">
     
@@ -34,7 +34,7 @@
     </g>
     <g transform="translate(0, 25)"><g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
-      <text class="lang-name" x="15" y="10">HTML 21.26%</text>
+      <text class="lang-name" x="15" y="10">HTML 21.25%</text>
     </g>
     </g>
     <g transform="translate(0, 50)"><g class="stagger" style="animation-delay: 750ms">
@@ -55,7 +55,7 @@
     </g>
     <g transform="translate(150, 25)"><g class="stagger" style="animation-delay: 1200ms">
       <circle cx="5" cy="6" r="5" fill="#8b8b8b" />
-      <text class="lang-name" x="15" y="10">PLpgSQL 4.31%</text>
+      <text class="lang-name" x="15" y="10">PLpgSQL 4.34%</text>
     </g>
     </g>
     <g transform="translate(150, 50)"><g class="stagger" style="animation-delay: 1350ms">
