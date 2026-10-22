@@ -16,41 +16,41 @@
       <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
     </mask>
     
-    <rect mask="url(#rect-mask)" x="0" y="0" width="98.57" height="8" fill="#f1e05a" />
-    <rect mask="url(#rect-mask)" x="98.57" y="0" width="49.10" height="8" fill="#e34c26" />
-    <rect mask="url(#rect-mask)" x="147.67" y="0" width="34.65" height="8" fill="#563d7c" />
-    <rect mask="url(#rect-mask)" x="182.32" y="0" width="29.75" height="8" fill="#3178c6" />
-    <rect mask="url(#rect-mask)" x="212.07" y="0" width="19.05" height="8" fill="#b07219" />
-    <rect mask="url(#rect-mask)" x="231.12" y="0" width="10.27" height="8" fill="#8b8b8b" />
-    <rect mask="url(#rect-mask)" x="241.39" y="0" width="8.45" height="8" fill="#3572A5" />
-    <rect mask="url(#rect-mask)" x="249.84" y="0" width=".02" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="0" y="0" width="98.50" height="8" fill="#f1e05a" />
+    <rect mask="url(#rect-mask)" x="98.50" y="0" width="49.07" height="8" fill="#e34c26" />
+    <rect mask="url(#rect-mask)" x="147.57" y="0" width="34.62" height="8" fill="#563d7c" />
+    <rect mask="url(#rect-mask)" x="182.19" y="0" width="29.90" height="8" fill="#3178c6" />
+    <rect mask="url(#rect-mask)" x="212.09" y="0" width="19.02" height="8" fill="#b07219" />
+    <rect mask="url(#rect-mask)" x="231.11" y="0" width="10.27" height="8" fill="#8b8b8b" />
+    <rect mask="url(#rect-mask)" x="241.38" y="0" width="8.45" height="8" fill="#3572A5" />
+    <rect mask="url(#rect-mask)" x="249.83" y="0" width=".02" height="8" fill="#8b8b8b" />
   </g>
   <g transform="translate(25, 80)">
     
     <g transform="translate(0, 0)"><g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
-      <text class="lang-name" x="15" y="10">JavaScript 39.43%</text>
+      <text class="lang-name" x="15" y="10">JavaScript 39.40%</text>
     </g>
     </g>
     <g transform="translate(0, 25)"><g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
-      <text class="lang-name" x="15" y="10">HTML 19.64%</text>
+      <text class="lang-name" x="15" y="10">HTML 19.63%</text>
     </g>
     </g>
     <g transform="translate(0, 50)"><g class="stagger" style="animation-delay: 750ms">
       <circle cx="5" cy="6" r="5" fill="#563d7c" />
-      <text class="lang-name" x="15" y="10">CSS 13.86%</text>
+      <text class="lang-name" x="15" y="10">CSS 13.85%</text>
     </g>
     </g>
     <g transform="translate(0, 75)"><g class="stagger" style="animation-delay: 900ms">
       <circle cx="5" cy="6" r="5" fill="#3178c6" />
-      <text class="lang-name" x="15" y="10">TypeScript 11.90%</text>
+      <text class="lang-name" x="15" y="10">TypeScript 11.96%</text>
     </g>
     </g>
     
     <g transform="translate(150, 0)"><g class="stagger" style="animation-delay: 1050ms">
       <circle cx="5" cy="6" r="5" fill="#b07219" />
-      <text class="lang-name" x="15" y="10">Java 7.62%</text>
+      <text class="lang-name" x="15" y="10">Java 7.61%</text>
     </g>
     </g>
     <g transform="translate(150, 25)"><g class="stagger" style="animation-delay: 1200ms">
